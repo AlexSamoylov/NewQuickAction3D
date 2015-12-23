@@ -101,7 +101,21 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
     public ActionItem getActionItem(int index) {
         return actionItems.get(index);
     }
-    
+
+	/**
+     * Clear action item
+     */
+    public void clearActionItem() {
+		 actionItems.clear();
+    }
+
+	/**
+     * Clear action item
+     */
+    public void removeActionItem(ActionItem item) {
+		 actionItems.remove(item);
+    }
+
 	/**
 	 * Set root view.
 	 * 

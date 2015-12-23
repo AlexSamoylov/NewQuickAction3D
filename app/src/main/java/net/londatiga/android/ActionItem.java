@@ -19,7 +19,21 @@ public class ActionItem {
 	private int actionId = -1;
     private boolean selected;
     private boolean sticky;
-	
+
+    public interface OnClickListener {
+        void onClick();
+    }
+
+    OnClickListener listener;
+
+    public OnClickListener getListener() {
+        return listener;
+    }
+
+    public void setOnClickListener(OnClickListener listener) {
+        this.listener = listener;
+    }
+
     /**
      * Constructor
      * 
