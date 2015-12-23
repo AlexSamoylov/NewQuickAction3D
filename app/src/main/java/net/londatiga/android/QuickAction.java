@@ -170,9 +170,9 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		View container;
 		
 		if (mOrientation == HORIZONTAL) {
-            container = mInflater.inflate(R.layout.action_item_horizontal, null);
+            container = mInflater.inflate(R.layout.quick_action_action_item_horizontal, null);
         } else {
-            container = mInflater.inflate(R.layout.action_item_vertical, null);
+            container = mInflater.inflate(R.layout.quick_action_action_item_vertical, null);
         }
 		
 		ImageView img 	= (ImageView) container.findViewById(R.id.iv_icon);
@@ -212,7 +212,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		container.setClickable(true);
 			 
 		if (mOrientation == HORIZONTAL && mChildPos != 0) {
-            View separator = mInflater.inflate(R.layout.horiz_separator, null);
+            View separator = mInflater.inflate(R.layout.quick_action_horiz_separator, null);
             
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.FILL_PARENT);
             
@@ -231,7 +231,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	}
 	
 	/**
-	 * Show quickaction popup. Popup is automatically positioned, on top or bottom of anchor view.
+	 * Show quickaction quick_action_popup. Popup is automatically positioned, on top or bottom of anchor view.
 	 * 
 	 */
 	public void show (View anchor) {
@@ -261,7 +261,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		int screenWidth 	= mWindowManager.getDefaultDisplay().getWidth();
 		int screenHeight	= mWindowManager.getDefaultDisplay().getHeight();
 		
-		//automatically get X coord of popup (top left)
+		//automatically get X coord of quick_action_popup (top left)
 		if ((anchorRect.left + rootWidth) > screenWidth) {
 			xPos 		= anchorRect.left - (rootWidth-anchor.getWidth());			
 			xPos 		= (xPos < 0) ? 0 : xPos;
@@ -312,7 +312,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 * 
 	 * @param screenWidth screen width
 	 * @param requestedX distance from left edge
-	 * @param onTop flag to indicate where the popup should be displayed. Set TRUE if displayed on top of anchor view
+	 * @param onTop flag to indicate where the quick_action_popup should be displayed. Set TRUE if displayed on top of anchor view
 	 * 		  and vice versa
 	 */
 	private void setAnimationStyle(int screenWidth, int requestedX, boolean onTop) {

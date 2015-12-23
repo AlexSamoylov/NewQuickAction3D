@@ -13,7 +13,7 @@ import android.widget.PopupWindow;
 import android.content.Context;
 
 /**
- * Custom popup window.
+ * Custom quick_action_popup window.
  * 
  * @author Lorensius W. L. T <lorenz@londatiga.net>
  *
